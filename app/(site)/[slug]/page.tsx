@@ -8,7 +8,11 @@ export default async function Page({ params }: Props) {
 
   return (
     <div>
-      <h1 className="text-transparent text-5xl drop-shadow font-extrabold">
+      <h1
+        className="bg-gradient-to-r 
+        from-green-400 via-violet-500 to-blue-700 
+         bg-clip-text text-transparent text-5xl drop-shadow font-extrabold"
+      >
         {page.title}
       </h1>
       <div className="text-lg text-gray-700 mt-10">
