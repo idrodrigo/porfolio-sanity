@@ -5,5 +5,8 @@ export type Page = {
   _createdAt: Date;
   title: string;
   slug: string;
+  linkedin: string;
+  git: string;
+  correo: string;
   content: PortableTextBlock[];
 };

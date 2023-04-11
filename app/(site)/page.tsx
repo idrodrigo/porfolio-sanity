@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default async function Home() {
   const projects = await getProjects();
+  const pro = projects || "";
   return (
     <div>
       <h1 className="text-7xl font-extrabold">
@@ -23,7 +24,7 @@ export default async function Home() {
 
       <h2 className="mt-16 font-bold text-gray-700 text-3xl">Projects:</h2>
       <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project) => {
+        {pro.map((project) => {
           const slug = project?.slug || "";
           const image = project?.image || "";
           const name = project?.name || "";

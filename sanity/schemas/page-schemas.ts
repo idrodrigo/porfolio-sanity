@@ -20,6 +20,21 @@ const page = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "linkedin",
+      title: "Linkedin",
+      type: "string",
+    },
+    {
+      name: "git",
+      title: "Git",
+      type: "string",
+    },
+    {
+      name: "correo",
+      title: "Correo",
+      type: "string",
+    },
   ],
 };
 
