@@ -19,15 +19,26 @@ export default async function Project({ params }: Props) {
         >
           {project.name}
         </h1>
-        <a
-          href={project.url}
-          title="View Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition"
-        >
-          View Project
-        </a>
+        <div className="">
+          <a
+            href={project.url}
+            title="View Project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-10 rounded-lg text-white font-bold py-3 px-4 whitespace-nowrap hover:bg-violet-500  bg-cyan-500 shadow-lg shadow-cyan-500/50"
+          >
+            View Project
+          </a>
+          <a
+            href={project.url}
+            title="View Project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg text-white font-bold py-3 px-4 whitespace-nowrap hover:bg-green-500  bg-cyan-500 shadow-lg shadow-cyan-500/50"
+          >
+            View Code
+          </a>
+        </div>
       </header>
 
       <div className="text-lg text-gray-700 mt-5">
@@ -39,7 +50,7 @@ export default async function Project({ params }: Props) {
         alt={project.name}
         width={1920}
         height={1080}
-        className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
+        className="mt-10 border-2 border-gray-700 object-cover rounded-2xl"
       />
     </div>
   );
