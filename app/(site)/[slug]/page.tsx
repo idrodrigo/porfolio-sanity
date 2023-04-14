@@ -1,5 +1,7 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+
 type Props = {
   params: { slug: string };
 };
@@ -10,9 +12,10 @@ export default async function Page({ params }: Props) {
   const linkedin = page?.linkedin || "";
   const git = page?.git || "";
   const correo = page?.correo || "";
+  const image = page?.image || "";
 
   return (
-    <div className="grid">
+    <div>
       <h1
         className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
@@ -20,32 +23,39 @@ export default async function Page({ params }: Props) {
       >
         {title}
       </h1>
-      <div className="text-lg text-blue-700 mt-16 mx-52 grid">
+      <div className="text-lg mt-10 md:mx-52 font-light">
         <PortableText value={content} />
+        <Image
+          src={image}
+          alt={title}
+          width={1920}
+          height={1080}
+          className="mt-10 border border-black object-cover rounded-xl mb-10"
+        />
 
         <h1
-          className="bg-blue-700 
-         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold mb-10 justify-self-center"
+          className="bg-black 
+         bg-clip-text text-transparent text-2xl drop-shadow font-light mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
-          <a href={linkedin} target="_blank">
+          <a href={`https://www.${linkedin}`} target="_blank">
             {linkedin}
           </a>
         </h1>
 
         <h1
-          className="bg-blue-700 
-         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold mb-10 justify-self-center"
+          className="bg-black
+         bg-clip-text text-transparent text-2xl drop-shadow font-light mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
-          <a href={git} target="_blank">
+          <a href={`https://www.${git}`} target="_blank">
             {git}
           </a>
         </h1>
 
         <h1
-          className="bg-blue-700 
-         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold justify-self-center"
+          className="bg-black 
+         bg-clip-text text-transparent text-2xl drop-shadow font-light underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
-          <a href={correo} target="_blank">
+          <a href={`https://www.${correo}`} target="_blank">
             {correo}
           </a>
         </h1>

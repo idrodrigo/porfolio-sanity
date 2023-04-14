@@ -22,7 +22,7 @@ export default async function RootLayout({
             href="/"
             className="img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold pl-6"
+          bg-clip-text text-transparent text-3xl font-bold pl-6 invisible md:visible "
           >
             Idrodrigo
           </Link>

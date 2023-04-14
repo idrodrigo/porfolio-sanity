@@ -7,6 +7,7 @@ export type Page = {
   slug: string;
   linkedin: string;
   git: string;
+  image: string;
   correo: string;
   content: PortableTextBlock[];
 };
