@@ -23,28 +23,30 @@ export default async function Page({ params }: Props) {
       >
         {title}
       </h1>
-      <div className="text-lg mt-10 md:mx-52 font-light">
+      <div className="text-lg mt-10 md:mx-52 font-light text-center">
         <PortableText value={content} />
         <Image
           src={image}
           alt={title}
-          width={1920}
+          width={600}
           height={1080}
-          className="mt-10 border border-black object-cover rounded-xl mb-10"
+          className="mt-10  h-80 border border-black object-cover rounded-xl mb-10"
         />
-
+      </div>
+      <div className="text-center">
         <h1
-          className="bg-black 
-         bg-clip-text text-transparent text-2xl drop-shadow font-light mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
+          className="relative bg-black 
+         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
           <a href={`https://www.${linkedin}`} target="_blank">
             {linkedin}
           </a>
+          <div className=""></div>
         </h1>
 
         <h1
           className="bg-black
-         bg-clip-text text-transparent text-2xl drop-shadow font-light mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
+         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold mb-10 underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
           <a href={`https://www.${git}`} target="_blank">
             {git}
@@ -53,7 +55,7 @@ export default async function Page({ params }: Props) {
 
         <h1
           className="bg-black 
-         bg-clip-text text-transparent text-2xl drop-shadow font-light underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
+         bg-clip-text text-transparent text-2xl drop-shadow font-extrabold underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2"
         >
           <a href={`https://www.${correo}`} target="_blank">
             {correo}

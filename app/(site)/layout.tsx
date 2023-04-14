@@ -16,15 +16,23 @@ export default async function RootLayout({
   const pro = pages || "";
   return (
     <html lang="en" className="bg-green-50">
-      <body className="max-w-6xl mx-auto py-10">
-        <header className=" flex items-center justify-between mx-5 border-b border-violet-500 py-3">
+      <body className="max-w-6xl mx-auto pt-10">
+        <header className=" flex items-center justify-between mx-5 border-b border-violet-500 pb-5">
           <Link
             href="/"
             className="img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold pl-6 invisible md:visible "
+          bg-clip-text text-transparent text-3xl font-bold pl-6 invisible md:visible absolute"
           >
             Idrodrigo
+          </Link>
+          <Link
+            href="/"
+            className="img-pro bg-gradient-to-r 
+        from-green-400 via-violet-500 to-blue-700 
+          bg-clip-text text-transparent text-3xl font-bold pl-6  md:invisible relative"
+          >
+            #
           </Link>
           <div className="flex items-center gap-11 text-green-400 pr-8 hover:text-violet-500 text-2xl font-bold">
             {pro.map((page) => (
@@ -38,7 +46,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="py-20 mx-10">{children}</main>
+        <main className="py-10 mx-10">{children}</main>
       </body>
     </html>
   );
