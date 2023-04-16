@@ -15,7 +15,7 @@ export default async function RootLayout({
   const pages = await getPages();
   const pro = pages || "";
   return (
-    <html lang="en" className="bg-green-50">
+    <html lang="en" className="">
       <body className="max-w-6xl mx-auto pt-10">
         <header className=" flex items-center justify-between mx-5 border-b border-violet-500 pb-5">
           <Link

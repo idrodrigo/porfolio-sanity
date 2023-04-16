@@ -18,7 +18,7 @@ export default async function Home() {
         </span>
       </h1>
 
-      <p className=" mt-5 text-xl text-green-400 ">
+      <p className=" mt-5 text-xl text-green-400 font-light">
         Java || JavaScript <br /> Back end || Front end Developer
       </p>
 
@@ -34,8 +34,8 @@ export default async function Home() {
             <Link
               href={`/projects/${slug}`}
               key={project._id}
-              className="slide-top shadow-md  shadow-emerald-600 border-blue-500 rounded-lg p-1 hover:scale-105 
-                      hover:border-blue-500 transition"
+              className="slide-top shadow-xl rounded-lg p-1 hover:border-4
+                      hover:border-green-300 transition "
             >
               {project.image && (
                 <Image
@@ -43,10 +43,10 @@ export default async function Home() {
                   alt={name}
                   width={750}
                   height={300}
-                  className="object-cover rounded-lg border border-green-500"
+                  className="object-cover rounded-lg border "
                 />
               )}
-              <div className="mt-6 font-extrabold text-red-600 text-2xl">
+              <div className="mt-6 font-light text-blue-500 text-xl">
                 {name}
               </div>
             </Link>
