@@ -12,14 +12,14 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <header className="flex items-center justify-between">
+      <div className="sm:flex sm:justify-between sm:items-center">
         <h1
           className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold"
         >
           {project.name}
         </h1>
-        <div className="">
+        <div className="py-6">
           <a
             href={project.url}
             title="View Project"
@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
             View Code
           </a>
         </div>
-      </header>
+      </div>
 
       <div className="text-lg text-gray-700 mt-5">
         <PortableText value={project.content} />
