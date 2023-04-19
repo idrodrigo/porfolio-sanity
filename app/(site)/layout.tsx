@@ -16,15 +16,15 @@ export default async function RootLayout({
   const pro = pages || "";
   return (
     <html lang="en" className="dark">
-      <body className="max-w-6xl mx-auto pt-10">
-        <header className=" flex items-center justify-between mx-5 border-b border-violet-500 pb-5">
+      <body className="max-w-6xl mx-auto dark:">
+        <header className="mt-10 flex items-center justify-between mx-5 border-b border-violet-500 pb-5">
           <Link
             href="/"
             className="img-pro bg-gradient-to-r 
-        from-green-400 via-violet-500 to-blue-700 
+        from-green-400 to-blue-700 
           bg-clip-text text-transparent text-3xl font-bold pl-6 invisible md:visible absolute"
           >
-            Idrodrigo
+            &#60; &Omega; &#62;
           </Link>
           <Link
             href="/"
@@ -34,15 +34,14 @@ export default async function RootLayout({
           >
             #
           </Link>
-          <div className="flex items-center gap-11 text-green-400 pr-8 hover:text-violet-500 text-2xl font-bold">
+          <div className="flex items-center gap-11 text-green-400 pr-8  text-2xl font-bold">
             {pro.map((page) => (
-              <Link
+              <div
                 key={page._id}
-                href={`/${page.slug}`}
-                className="img-pro underline decoration-indigo-500 decoration-wavy decoration-2 hover:decoration-green-500 hover:decoration-wavy hover:decoration-2 "
+                className="img-pro underline decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
               >
-                {page.title}
-              </Link>
+                <Link href={`/${page.slug}`}>{page.title}</Link>
+              </div>
             ))}
           </div>
         </header>
