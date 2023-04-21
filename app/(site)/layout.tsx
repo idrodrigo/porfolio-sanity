@@ -17,12 +17,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="max-w-6xl mx-auto dark:">
-        <header className="mt-10 flex items-center justify-between mx-5 border-b border-violet-500 pb-5">
+        <header className="mt-3 flex items-center justify-between mx-5 border-b border-violet-500 pb-2">
           <Link
             href="/"
             className="img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold pl-6 invisible md:visible absolute"
+          bg-clip-text text-transparent text-3xl font-bold pl-3 invisible md:visible absolute"
           >
             &#60; &Omega; &#62;
           </Link>
@@ -30,11 +30,11 @@ export default async function RootLayout({
             href="/"
             className="img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold pl-6  md:invisible relative"
+          bg-clip-text text-transparent text-3xl font-bold pl-3  md:invisible relative"
           >
-            #
+            &Omega;
           </Link>
-          <div className="flex items-center gap-11 text-green-400 pr-8  text-2xl font-bold">
+          <div className="flex items-center gap-7 text-green-400 pr-3 md:pr-6  text-2xl font-bold">
             {pro.map((page) => (
               <div
                 key={page._id}
@@ -45,7 +45,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="py-10 mx-10">{children}</main>
+        <main className="pt-6 mx-5">{children}</main>
       </body>
     </html>
   );

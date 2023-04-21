@@ -50,7 +50,7 @@ export default async function Project({ params }: Props) {
         alt={project.name}
         width={1920}
         height={1080}
-        className="mt-10 border-2 border-gray-700 object-cover rounded-2xl"
+        className="mt-10 object-cover px-40"
       />
     </div>
   );
