@@ -16,7 +16,7 @@ export default async function RootLayout({
   const pro = pages || "";
   return (
     <html lang="en" className="dark">
-      <body className="max-w-6xl mx-auto dark:">
+      <body className="max-w-6xl mx-auto dark: ">
         <header className="mt-3 flex items-center justify-between mx-5 border-b border-violet-500 pb-2">
           <Link
             href="/"

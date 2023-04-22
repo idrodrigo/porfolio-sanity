@@ -2,6 +2,34 @@ import { Project } from "@/types/project";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { Page } from "@/types/page";
+import { Skills } from "@/types/skills";
+
+export async function getSkills(): Promise<Skills[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "skill"]{
+        _id,
+        _createdAt,
+        skill,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+      }`
+  );
+}
+
+export async function getSkill(slug: string): Promise<Skills> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "skill" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      skill,
+      "slug": slug.current,
+      "image": image.asset->url,
+      url,
+    }`,
+    { slug }
+  );
+}
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
