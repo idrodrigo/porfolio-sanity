@@ -84,7 +84,10 @@ export async function getPage(slug: string): Promise<Page> {
       linkedin,
       git, 
       correo,
-      "image": image.asset->url
+      "image": image.asset->url,
+      "imgLinkedin": imgLinkedin.asset->url,
+      "imgGit": imgGit.asset->url,
+      "imgCorreo": imgCorreo.asset->url,
     }`,
     { slug }
   );

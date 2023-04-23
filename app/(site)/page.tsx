@@ -2,6 +2,7 @@ import { getProjects, getSkills } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 import "../globals.css";
+import Skills from "../components/skills/Skills";
 
 export default async function Home() {
   const projects = await getProjects();
@@ -80,6 +81,7 @@ export default async function Home() {
       <h2 className="img-pro mt-8 font-bold text-3xl underline decoration-red-600 decoration-wavy text-center">
         Skills:
       </h2>
+
       <div className="mx-2 md:mx-6 lg:mx-10 mt-7 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-8 my-10">
         {skill.reverse().map((ski) => {
           const image = ski?.image || "";
