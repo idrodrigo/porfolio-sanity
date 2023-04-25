@@ -29,8 +29,9 @@ export default async function Project({ params }: Props) {
           >
             View Project
           </a>
+
           <a
-            href={project.url}
+            href={project.urlcode}
             title="View Project"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,14 +45,17 @@ export default async function Project({ params }: Props) {
       <div className="text-lg text-gray-700 mt-5">
         <PortableText value={project.content} />
       </div>
-
-      <Image
-        src={project.image}
-        alt={project.name}
-        width={1920}
-        height={1080}
-        className="mt-10 object-cover px-40"
-      />
+      <div className="mx-2 grid justify-center ">
+        {project.image && (
+          <Image
+            src={project.image}
+            alt={project.name}
+            width={225}
+            height={1080}
+            className="mt-1 mb-8 object-cover blur-in rounded-md align-middle "
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -33,6 +33,11 @@ const project = {
       type: "url",
     },
     {
+      name: "urlcode",
+      title: "URLcode",
+      type: "url",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",
