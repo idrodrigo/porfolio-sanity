@@ -52,7 +52,7 @@ export default async function Project({ params }: Props) {
             alt={project.name}
             width={225}
             height={1080}
-            className="mt-1 mb-8 object-cover blur-in rounded-md align-middle "
+            className="mt-1 mb-8 object-cover  rounded-md align-middle "
           />
         )}
       </div>

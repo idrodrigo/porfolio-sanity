@@ -2,7 +2,6 @@ import React from "react";
 import { getSkills } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
-import "../globals.css";
 
 export default async function Skills() {
   const skills = await getSkills();
