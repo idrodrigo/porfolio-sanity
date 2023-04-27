@@ -7,7 +7,7 @@ export default async function Projects() {
   const projects = await getProjects();
   const pro = projects || "";
   return (
-    <div className="mx-2 md:mx-6 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
+    <div className="mx-12 md:mx-12 lg:mx-6 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
       {pro.reverse().map((project) => {
         const slug = project?.slug || "";
         const image = project?.image || "";

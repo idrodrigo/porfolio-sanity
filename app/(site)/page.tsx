@@ -15,7 +15,7 @@ export default async function Home() {
           Rodrigo
         </span>
       </h1>
-      <p className="text-center  md:text-left  mt-2 text-xl text-green-500 font-light">
+      <p className="text-center  md:text-left  mt-2 text-xl text-green-400 font-light">
         Java || JavaScript <br /> Back end || Front end Developer
       </p>
 

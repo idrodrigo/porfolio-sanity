@@ -34,7 +34,7 @@ export default async function RootLayout({
           >
             &Omega;
           </Link>
-          <div className="flex items-center gap-7 text-green-500 pr-3 md:pr-6  text-2xl font-bold">
+          <div className="flex items-center gap-7 text-green-400 pr-3 md:pr-6  text-2xl font-bold">
             {pro.map((page) => (
               <div
                 key={page._id}
