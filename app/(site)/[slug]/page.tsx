@@ -38,15 +38,18 @@ export default async function Page({ params }: Props) {
           {title}
         </h1>
       </div>
-      <div className="text-lg mt-10 md:mx-52 font-light text-center justify-center">
-        <PortableText value={content} />
+      <div className="md:flex mx-2 text-lg mt-10 md:mx-32 font-light text-center justify-center">
         <Image
           src={image}
           alt={title}
-          width={600}
-          height={1080}
-          className="mt-10  h-80 border border-black object-cover rounded-xl mb-10 mx-auto"
+          width={1600}
+          height={0}
+          className="mt-10 md:mt-0 h-80  border-black object-cover rounded-2xl mb-10"
         />
+
+        <div className="self-center  md:mx-8">
+          <PortableText value={content} />
+        </div>
       </div>
       <div className="mx-2 md:mx-6 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
         {socials.map((social) => {
