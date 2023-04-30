@@ -19,12 +19,12 @@ export default async function Home() {
         Java || JavaScript <br /> Back end || Front end Developer
       </p>
 
-      <h2 className="img-pro mt-2 font-bold text-3xl underline decoration-red-600 decoration-wavy text-center">
+      <h2 className="img-pro mt-2 font-bold text-3xl underline underline-offset-8 decoration-red-600 decoration-wavy text-center">
         Projects:
       </h2>
       {/* @ts-expect-error Server Component */}
       <Projects />
-      <h2 className="img-pro mt-8 font-bold text-3xl underline decoration-red-600 decoration-wavy text-center">
+      <h2 className="img-pro mt-8 font-bold text-3xl underline underline-offset-4 decoration-red-600 decoration-wavy text-center">
         Skills:
       </h2>
       {/* @ts-expect-error Server Component */}

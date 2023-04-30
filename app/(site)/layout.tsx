@@ -38,7 +38,7 @@ export default async function RootLayout({
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="img-pro underline decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
+                className="img-pro underline underline-offset-4 decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
               >
                 <Link href={`/${page.slug}`}>{page.title}</Link>
               </div>
