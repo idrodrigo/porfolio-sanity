@@ -18,15 +18,18 @@ export default async function Home() {
       <p className="text-center  md:text-left  mt-2 text-xl text-green-400 font-light">
         Java || JavaScript <br /> Back end || Front end Developer
       </p>
-
-      <h2 className="img-pro mt-2 font-bold text-3xl underline underline-offset-8 decoration-red-600 decoration-wavy text-center">
-        Projects:
-      </h2>
+      <div className="flex justify-center">
+        <h2 className="img-pro mt-2 font-bold text-3xl underline underline-offset-8 decoration-red-600 decoration-wavy">
+          Projects:
+        </h2>
+      </div>
       {/* @ts-expect-error Server Component */}
       <Projects />
-      <h2 className="img-pro mt-8 font-bold text-3xl underline underline-offset-4 decoration-red-600 decoration-wavy text-center">
-        Skills:
-      </h2>
+      <div className="flex justify-center">
+        <h2 className="img-pro mt-8 font-bold text-3xl underline underline-offset-4 decoration-red-600 decoration-wavy text-center">
+          Skills:
+        </h2>
+      </div>
       {/* @ts-expect-error Server Component */}
       <Skills />
     </div>
