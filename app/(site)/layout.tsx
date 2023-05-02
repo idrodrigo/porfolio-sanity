@@ -45,7 +45,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="pt-6 mx-5">{children}</main>
+        <main className="pt-6 mx-6">{children}</main>
       </body>
     </html>
   );

@@ -2,13 +2,15 @@ import React from "react";
 import { getSkills } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
+import Subtittle from "../subtittle/Subtittle";
 
 export default async function Skills() {
   const skills = await getSkills();
   const skill = skills || "";
   return (
     <>
-      <div className="mx-2 md:mx-6 lg:mx-10 mt-7 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-8 my-10">
+      <Subtittle subtittle="Skills:" marginTop="mt-8" />
+      <div className="mx-6 md:mx-8 lg:mx-12 mt-7 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-auto lg:gap-x-auto gap-y-8 my-10">
         {skill.reverse().map((ski) => {
           const image = ski?.image || "";
           const skill = ski?.skill || "";
