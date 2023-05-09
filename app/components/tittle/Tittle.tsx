@@ -1,6 +1,16 @@
 import React from "react";
+import TypeWords from "../typeWords/TypeWords";
 
 function Tittle() {
+  const jobTitles = [
+    "Java Developer",
+    "JavaScript Developer",
+    "Back End Developer",
+    "Front End Developer",
+    "Full Stack Developer",
+    "Software Developer",
+    "Web Developer",
+  ];
   return (
     <>
       <h1 className="text-7xl font-extrabold text-center  md:text-left">
@@ -13,9 +23,7 @@ function Tittle() {
           Rodrigo
         </span>
       </h1>
-      <p className="text-center  md:text-left  mt-2 text-xl text-green-400 font-light">
-        Java || JavaScript <br /> Back end || Front end Developer
-      </p>
+      <TypeWords jobTitles={jobTitles} />
     </>
   );
 }
