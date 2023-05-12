@@ -2,6 +2,7 @@ import "../globals.css";
 import Skills from "../components/skills/Skills";
 import Projects from "../components/projects/Projects";
 import Tittle from "../components/tittle/Tittle";
+import Slider from "../components/slider/Slider";
 
 export default async function Home() {
   return (
