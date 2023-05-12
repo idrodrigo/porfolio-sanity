@@ -30,7 +30,7 @@ export default async function RootLayout({
             href="/"
             className="img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 md:invisible"
+          bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 md:invisible absolute"
           >
             &Omega;
           </Link>
