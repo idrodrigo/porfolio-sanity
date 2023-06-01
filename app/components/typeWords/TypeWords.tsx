@@ -9,7 +9,7 @@ const TypeWords: React.FC<Props> = ({ jobTitles }) => {
   return (
     <>
         <div className="flex justify-center">
-        <div className="type justify-center md:mx-0 mx-6 text-center mt-10 mb-5 text-4xl hover:text-green-400 font-extrabold text-blue-700">
+        <div className="type font-Comic justify-center md:mx-0 mx-6 text-center mt-6 mb-5 text-4xl hover:text-green-400 font-extrabold text-blue-700">
           <Typewriter
             options={{
               loop: true,
