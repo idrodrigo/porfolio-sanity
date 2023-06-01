@@ -20,7 +20,7 @@ export default async function RootLayout({
         <header className="mt-4 flex items-center justify-between mx-5 border-b border-violet-500 pb-3">
           <Link
             href="/"
-            className="img-pro bg-gradient-to-r 
+            className="omega img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
           bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 invisible md:visible"
           >
@@ -28,7 +28,7 @@ export default async function RootLayout({
           </Link>
           <Link
             href="/"
-            className="img-pro bg-gradient-to-r 
+            className="omega img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
           bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 md:invisible absolute"
           >
@@ -38,9 +38,9 @@ export default async function RootLayout({
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="img-pro underline underline-offset-4 decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
+                className="nav img-pro underline underline-offset-4 decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
               >
-                <Link href={`/${page.slug}`}>{page.title}</Link>
+                <Link href={`/${page.slug}`} >{page.title}</Link>
               </div>
             ))}
           </div>

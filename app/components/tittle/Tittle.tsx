@@ -13,15 +13,17 @@ function Tittle() {
   ];
   return (
     <>
-      <h1 className="text-7xl font-extrabold text-center  md:text-left">
-        Hello I&apos;m{" "}
-        <span
+      <h1 className="mb-5 text-7xl font-extrabold text-center  leading-snug">
+        <div id="hello" className="mr-5">
+        Hello I&apos;m{" "} Rodrigo
+        </div>
+        {/* <span
           className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 transition
           bg-clip-text text-transparent hover:from-blue-700 hover:via-green-400 hover:to-violet-500"
         >
           Rodrigo
-        </span>
+        </span> */}
       </h1>
       <TypeWords jobTitles={jobTitles} />
     </>

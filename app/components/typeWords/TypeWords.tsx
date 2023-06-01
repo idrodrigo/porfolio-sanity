@@ -8,8 +8,7 @@ interface Props {
 const TypeWords: React.FC<Props> = ({ jobTitles }) => {
   return (
     <>
-      <div className="flex">
-        <div className="md:mx-0 mx-6 text-center  md:text-left  mt-2 text-4xl hover:text-green-400 font-extrabold text-blue-700">
+        <div className="type justify-center md:mx-0 mx-6 text-center mt-10 mb-5 text-4xl hover:text-green-400 font-extrabold text-blue-700">
           <Typewriter
             options={{
               loop: true,
@@ -26,7 +25,6 @@ const TypeWords: React.FC<Props> = ({ jobTitles }) => {
             }}
           />
         </div>
-      </div>
     </>
   );
 };
