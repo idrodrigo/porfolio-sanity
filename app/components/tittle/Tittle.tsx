@@ -14,7 +14,7 @@ function Tittle() {
   return (
     <>
       <h1 className="mb-5 text-7xl font-extrabold text-center  leading-snug">
-        <div id="hello" className="font-Cursive">
+        <div id="hello" className="font-Comic">
         Hello I&apos;m{" "} Rodrigo
         </div>
         {/* <span

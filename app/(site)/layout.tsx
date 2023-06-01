@@ -20,7 +20,7 @@ export default async function RootLayout({
         <header className="mt-4 flex items-center justify-between mx-5 border-b border-violet-500 pb-3">
           <Link
             href="/"
-            className="omega font-Cursive img-pro bg-gradient-to-r 
+            className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
           bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 invisible md:visible"
           >
@@ -28,7 +28,7 @@ export default async function RootLayout({
           </Link>
           <Link
             href="/"
-            className="omega img-pro bg-gradient-to-r 
+            className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
           bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 md:invisible absolute"
           >
