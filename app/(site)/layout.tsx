@@ -12,17 +12,18 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   const pages = await getPages();
   const pro = pages || "";
   return (
     <html lang="en" className="dark">
       <body className="max-w-6xl mx-auto dark: ">
-        <header className="mt-4 flex items-center justify-between mx-5 border-b border-violet-500 pb-3">
+        <header className="mt-4 font-bold flex items-center justify-between mx-5 border-b border-violet-500 pb-3">
           <Link
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 invisible md:visible"
+          bg-clip-text text-transparent text-3xl  ml-3 px-2 invisible md:visible"
           >
             &#60; &Omega; &#62;
           </Link>
@@ -30,22 +31,26 @@ export default async function RootLayout({
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl font-bold ml-3 px-2 md:invisible absolute"
+          bg-clip-text text-transparent text-3xl  ml-3 px-2 md:invisible absolute"
           >
             &Omega;
           </Link>
-          <div className="flex items-center gap-7 text-green-400 pr-3 md:pr-6  text-2xl font-bold">
+          <div className="flex font-Comic items-center gap-7 text-2xl">
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="nav img-pro underline underline-offset-4 decoration-wavy decoration-2 decoration-violet-500 hover:decoration-green-500 hover:text-violet-500 hover:decoration-wavy hover:decoration-2 "
+                className="nav img-pro bg-gradient-to-r 
+                from-green-400 via-violet-500 to-blue-700 
+                  bg-clip-text text-transparent"
               >
                 <Link href={`/${page.slug}`} >{page.title}</Link>
               </div>
             ))}
           </div>
         </header>
-        <main className="pt-6 mx-6">{children}</main>
+
+        <main className="py-3 mx-6">{children}</main>
+
       </body>
     </html>
   );

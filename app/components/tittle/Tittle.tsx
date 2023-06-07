@@ -3,12 +3,13 @@ import TypeWords from "../typeWords/TypeWords";
 
 function Tittle() {
   const jobTitles = [
+    "Software Developer",
     "Java Developer",
     "JavaScript Developer",
     "Back End Developer",
     "Front End Developer",
     "Full Stack Developer",
-    "Software Developer",
+    
     "Web Developer",
   ];
   return (
