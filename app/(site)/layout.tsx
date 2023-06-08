@@ -18,12 +18,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="max-w-6xl mx-auto dark: ">
-        <header className="mt-4 font-bold flex items-center justify-between mx-5 border-b border-violet-500 pb-3">
+        <header className="mt-4 font-bold flex items-center justify-between  px-5 border-violet-500 pb-3">
           <Link
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
-          bg-clip-text text-transparent text-3xl  ml-3 px-2 invisible md:visible"
+          bg-clip-text text-transparent text-3xl px-2 invisible md:visible"
           >
             &#60; &Omega; &#62;
           </Link>
@@ -39,9 +39,9 @@ export default async function RootLayout({
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="nav img-pro bg-gradient-to-r 
+                className="nav  bg-gradient-to-r 
                 from-green-400 via-violet-500 to-blue-700 
-                  bg-clip-text text-transparent"
+                  bg-clip-text text-transparent border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
               >
                 <Link href={`/${page.slug}`} >{page.title}</Link>
               </div>

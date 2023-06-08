@@ -11,9 +11,11 @@ export default async function Home() {
     <>
       <ButtonBack />
       <Tittle />
-      {/* @ts-expect-error Server Component */}
 
+
+      {/* @ts-expect-error Server Component */}
       <Projects />
+
       {/* @ts-expect-error Server Component */}
       <Skills />
     </>

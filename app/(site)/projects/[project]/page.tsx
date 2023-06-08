@@ -12,22 +12,22 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <div className="sm:flex sm:justify-between sm:items-center">
-        <h1
+      <div className="sm:flex sm:justify-between">
+        <h2
           className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold"
         >
           {project.name}
-        </h1>
-        <div className="py-6">
+        </h2>
+        <div className="py-5 flex gap-5 justify-center items-center text-center">
           <a
             href={project.url}
             title="View Project"
             target="_blank"
             rel="noopener noreferrer"
-            className="mr-10 rounded-lg text-white font-bold py-3 px-4 whitespace-nowrap hover:bg-violet-500  bg-cyan-500 shadow-lg shadow-cyan-500/50"
+            className=" border-b-[5px] border-gray-200 rounded-xl py-2 border  hover:border-b-[2px] bg-violet-400 w-32"
           >
-            View Project
+            Live Demo
           </a>
 
           <a
@@ -35,9 +35,9 @@ export default async function Project({ params }: Props) {
             title="View Project"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg text-white font-bold py-3 px-4 whitespace-nowrap hover:bg-green-500  bg-cyan-500 shadow-lg shadow-cyan-500/50"
+            className="border-b-[5px] border-b-gray-200 rounded-xl py-2 border  hover:border-b-[2px] bg-green-400 w-32 "
           >
-            View Code
+            Source Code
           </a>
         </div>
       </div>
