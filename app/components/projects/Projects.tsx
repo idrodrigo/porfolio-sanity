@@ -3,14 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/sanity/sanity-utils";
 import Subtittle from "../subtittle/Subtittle";
+import Carousel from "../carousel/Carousel";
 
 export default async function Projects() {
   const projects = await getProjects();
   const pro = projects || "";
   return (
     <>
-      <Subtittle subtittle="Projects:" marginTop="mt-2" />
-      <div className="mx-6 md:mx-8 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 pb-5">
+      <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
+       {/* @ts-expect-error Server Component */}
+      <Carousel />
+      {/* <div className="mx-6 md:mx-8 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 pb-5">
         {pro.reverse().map((project) => {
           const slug = project?.slug || "";
           const image = project?.image || "";
@@ -56,7 +59,7 @@ export default async function Projects() {
             </Link>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 }
