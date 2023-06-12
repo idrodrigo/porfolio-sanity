@@ -23,7 +23,7 @@ export default async function RootLayout({
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
-          bg-clip-text text-transparent text-3xl px-2 invisible md:visible"
+          bg-clip-text text-transparent text-3xl px-2 invisible md:visible absolute"
           >
             &#60; &Omega; &#62;
           </Link>
@@ -31,15 +31,18 @@ export default async function RootLayout({
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl  ml-3 px-2 md:invisible absolute"
+          bg-clip-text text-transparent text-3xl ml-3 px-2 md:invisible relative"
           >
             &Omega;
           </Link>
+
+
+
           <div className="flex font-Comic items-center gap-7 text-2xl">
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="nav text-center  font-extrabold text-blue-700  w-32  border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
+                className="nav text-center  font-extrabold text-blue-700  md:w-32  border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
               >
                 <Link href={`/${page.slug}`} >{page.title}</Link>
               </div>
@@ -47,7 +50,7 @@ export default async function RootLayout({
           </div>
         </header>
 
-        <main className="py-3 mx-6">{children}</main>
+        <main className="md:py-3 mx-6">{children}</main>
 
       </body>
     </html>
