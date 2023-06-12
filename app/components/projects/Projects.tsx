@@ -39,7 +39,7 @@ export default async function Projects() {
                     src={image}
                     alt={name}
                     width={150}
-                    height={1080}
+                    height={303}
                     className="object-cover  rounded-md align-middle "
                   />
                 )}

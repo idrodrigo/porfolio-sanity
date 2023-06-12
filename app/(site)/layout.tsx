@@ -39,9 +39,7 @@ export default async function RootLayout({
             {pro.map((page) => (
               <div
                 key={page._id}
-                className="nav  bg-gradient-to-r 
-                from-green-400 via-violet-500 to-blue-700 
-                  bg-clip-text text-transparent border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
+                className="nav text-center  font-extrabold text-blue-700  w-32  border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
               >
                 <Link href={`/${page.slug}`} >{page.title}</Link>
               </div>

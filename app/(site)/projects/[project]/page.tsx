@@ -19,7 +19,7 @@ export default async function Project({ params }: Props) {
         >
           {project.name}
         </h2>
-        <div className="py-5 flex gap-5 justify-center items-center text-center">
+        <div className="py-5 flex gap-5 justify-center items-center text-center text-white">
           <a
             href={project.url}
             title="View Project"
