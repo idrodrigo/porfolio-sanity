@@ -1,25 +1,26 @@
-.texture{
+.texture {
     width: 2rem;
     height: 2rem;
     background-attachment: fixed;
     background-image: url(https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=716&q=80);
 }
 
-.mouse{
+.mouse {
     width: 2rem;
     height: 2rem;
     background-attachment: fixed;
     background-image: url(../../img/mouse-1s-1084px.png);
 }
 
-.space{
+.space {
     width: 2rem;
     height: 2rem;
     background-attachment: fixed;
-    background-image: url(../../img/space.webp);
+    /* background-image: url(../../img/space.jpg); */
+    background-color: rgb(22, 22, 27);
 }
 
-.buble{
+.buble {
     width: 2rem;
     height: 2rem;
     background-attachment: fixed;

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .bbody {
   background-repeat: round;
   background-attachment: fixed;
@@ -15,7 +17,8 @@
 
 .bspace {
   background-attachment: fixed;
-  background-image: url(./img/space.webp);
+  /* background-image: url(./img/space.jpg); */
+  background-color: rgb(22, 22, 27);
   background-size: cover;
 }
 

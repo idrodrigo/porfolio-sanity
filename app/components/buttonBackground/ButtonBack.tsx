@@ -43,21 +43,21 @@ function ButtonBack() {
     <>
       <div className="flex flex-row-reverse gap-2">
         <button style={{ borderWidth: enabled ? '2px' : '0px' }}
-          onClick={() => { setEnabled(!enabled); setEnabled2(false); setEnabled3(false); setEnabled4(false) }} className="texture border-blue-700 border shadow-inner rounded-xl">
+          onClick={() => { setEnabled(!enabled); setEnabled2(false); setEnabled3(false); setEnabled4(false) }} className="texture border-red-600 border shadow-inner rounded-xl">
 
         </button>
 
         <button style={{ borderWidth: enabled2 ? '2px' : '0px' }}
-          onClick={() => { setEnabled2(!enabled2); setEnabled(false); setEnabled3(false); setEnabled4(false) }} className="mouse border-blue-700 border shadow-inner rounded-xl">
+          onClick={() => { setEnabled2(!enabled2); setEnabled(false); setEnabled3(false); setEnabled4(false) }} className="mouse border-red-600 border shadow-inner rounded-xl">
         </button>
 
         <button style={{ borderWidth: enabled3 ? '2px' : '0px' }}
-          onClick={() => { setEnabled3(!enabled3); setEnabled(false); setEnabled2(false); setEnabled4(false) }} className="space border-blue-700 border shadow-inner rounded-xl">
+          onClick={() => { setEnabled3(!enabled3); setEnabled(false); setEnabled2(false); setEnabled4(false) }} className="space border-red-600 border shadow-inner rounded-xl">
 
         </button>
 
         <button style={{ borderWidth: enabled4 ? '2px' : '0px' }}
-          onClick={() => { setEnabled4(!enabled4); setEnabled(false); setEnabled2(false); setEnabled3(false) }} className="buble border-blue-700 shadow-inner rounded-xl">
+          onClick={() => { setEnabled4(!enabled4); setEnabled(false); setEnabled2(false); setEnabled3(false) }} className="buble border-red-600 shadow-inner rounded-xl">
           {/* {enabled4 ? 'ON' : 'OFF'} */}
         </button>
       </div >

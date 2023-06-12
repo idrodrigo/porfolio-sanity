@@ -3,13 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/sanity/sanity-utils";
 import Subtittle from "../subtittle/Subtittle";
+import Carousel from "../carousel/Carousel";
 
 export default async function Projects() {
   const projects = await getProjects();
   const pro = projects || "";
   return (
     <>
-      <Subtittle subtittle="Projects:" marginTop="mt-2" />
+      <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
+      {/* <Carousel /> */}
       <div className="mx-6 md:mx-8 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 pb-5">
         {pro.reverse().map((project) => {
           const slug = project?.slug || "";
@@ -37,7 +39,7 @@ export default async function Projects() {
                     src={image}
                     alt={name}
                     width={150}
-                    height={1080}
+                    height={303}
                     className="object-cover  rounded-md align-middle "
                   />
                 )}
