@@ -23,7 +23,7 @@ export default async function Projects() {
               href={`/projects/${slug}`}
               key={project._id}
               className="slide-top shadow-lg border border-gray-100 rounded-3xl p-1 hover:shadow-inner
-                  hover:transition"
+                  hover:transition flex flex-col justify-between"
             >
               <div className="p-2 text-center flex justify-center">
                 <div
@@ -40,7 +40,7 @@ export default async function Projects() {
                     alt={name}
                     width={150}
                     height={303}
-                    className="object-cover  rounded-md align-middle "
+                    className="object-cover rounded-md align-middle "
                   />
                 )}
               </div>
