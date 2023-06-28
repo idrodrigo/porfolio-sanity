@@ -7,6 +7,7 @@ import './Carousel.css'
 import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/sanity/sanity-utils";
+import Subtittle from '../subtittle/Subtittle';
 
 async function Carousel() {
 const responsive = {
@@ -97,9 +98,12 @@ const Carousel1 = () => (
 
 
     return (
+      <>
+    <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
         <div className='pt-7 mx-2'>
             {Carousel1()}
         </div>
+        </>
     );
 }
 
