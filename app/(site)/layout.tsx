@@ -18,27 +18,31 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="max-w-6xl mx-auto dark: ">
-        <header className="mt-4 font-bold flex items-center justify-between  px-5 border-violet-500 pb-3">
+        <header className="mt-4 font-bold flex items-center md:justify-between justify-center px-14 border-violet-500 pb-3">
           <Link
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 to-blue-700 
-          bg-clip-text text-transparent text-3xl px-2 invisible md:visible absolute"
+          bg-clip-text text-transparent text-3xl px-2 invisible md:visible hidden md:block"
           >
             &#60; &Omega; &#62;
           </Link>
-          <Link
+          {/* <Link
             href="/"
             className="omega font-Comic img-pro bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
-          bg-clip-text text-transparent text-3xl ml-3 px-2 md:invisible relative"
+          bg-clip-text text-transparent text-3xl  ml-3 px-2 invisible absolute"
           >
             &Omega;
-          </Link>
-
-
-
+          </Link> */}
           <div className="flex font-Comic items-center gap-7 text-2xl">
+
+          <div
+              className="nav md:hidden text-center  font-extrabold text-blue-700  md:w-32  border-b-[5px] border-gray-200 rounded-xl px-3 border  hover:border-b-[2px]"
+            >
+              <Link href={`/`} >Home</Link>
+            </div>
+
             {pro.map((page) => (
               <div
                 key={page._id}
@@ -48,6 +52,7 @@ export default async function RootLayout({
               </div>
             ))}
           </div>
+
         </header>
 
         <main className="md:py-3 mx-6">{children}</main>

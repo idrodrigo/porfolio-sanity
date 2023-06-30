@@ -1,6 +1,9 @@
 import React from "react";
 import TypeWords from "../typeWords/TypeWords";
+import { Pacifico } from 'next/font/google'
 
+const pacifico = Pacifico( {subsets: ['latin'], weight: '400'})
+ 
 function Tittle() {
   const jobTitles = [
     "Software Developer",
@@ -14,9 +17,11 @@ function Tittle() {
   ];
   return (
     <>
-      <h1 className="text-7xl font-extrabold text-center  leading-snug md:mb-6">
-        <div id="hello" className="font-Comic">
-        Hello I&apos;m{" "} Rodrigo
+      <h1 className="md:text-7xl font-extrabold text-center leading-snug text-4xl md:mb-6 text-green-400">
+        <div id="" className={pacifico.className}>
+          <span className="hello">
+        Hello, I&apos;m{" "} Rodrigo
+        </span>
         </div>
         {/* <span
           className="bg-gradient-to-r 

@@ -10,9 +10,10 @@ import Carousel from "../components/carousel/Carousel";
 export default async function Home() {
   return (
     <>
-      <ButtonBack />
+      {/* <ButtonBack /> */}
       <Tittle />
-
+      {/* @ts-expect-error Server Component
+      <Carousel /> */}
       {/* @ts-expect-error Server Component */}
       <Projects />
 

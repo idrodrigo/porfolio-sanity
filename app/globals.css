@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -36,15 +37,18 @@
   text-shadow: -2px 3px 1px #000000
 }
 
-#hello {
-  display: inline;
-  color: #fcedd8;
-  text-shadow: 5px 5px 0px #eb452b,
-    10px 10px 0px #efa032,
-    15px 15px 0px #46b59b,
-    20px 20px 0px #017e7f,
-    25px 25px 0px #052939
+@media only screen and (min-width: 600px) {
+  .hello {
+    display: inline;
+    color: #fcedd8;
+    text-shadow: 5px 5px 0px #eb452b,
+      10px 10px 0px #efa032,
+      15px 15px 0px #46b59b,
+      20px 20px 0px #017e7f,
+      25px 25px 0px #052939
+  }
 }
+
 
 
 @keyframes shake-left-right {

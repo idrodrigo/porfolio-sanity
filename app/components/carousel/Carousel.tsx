@@ -7,26 +7,29 @@ import './Carousel.css'
 import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/sanity/sanity-utils";
+import Subtittle from '../subtittle/Subtittle';
+import { useClient } from 'sanity';
 
 async function Carousel() {
-const responsive = {
+
+  const responsive = {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 3 },
-};
+  };
 
 
-const projects = await getProjects();
-const pro = projects || "";
+  const projects = await getProjects();
+  const pro = projects || "";
 
-const items = 
+  const items =
     pro.reverse().map((project) => {
-        const slug = project?.slug || "";
-        const image = project?.image || "";
-        const name = project?.name || "";
-        const tools = project?.tags || [];
-        return (
-            <div key={project._id} className='flex justify-center mb-6'>
+      const slug = project?.slug || "";
+      const image = project?.image || "";
+      const name = project?.name || "";
+      const tools = project?.tags || [];
+      return (
+        <div key={project._id} className='flex justify-center mb-6'>
           <Link
             href={`/projects/${slug}`}
             key={project._id}
@@ -64,43 +67,46 @@ const items =
               ))}
             </div>
           </Link>
-          </div>
-        );
-      })
-
-    const renderSlideInfo = ({ item, itemsCount }: any) => {
-        return `${item}\\${itemsCount}`;
-    };
-    
-    const renderDotsItem = ({ isActive }: any) => {
-        return isActive ? <p className='font-Comic md:mr-3 mr-1 text-green-500 font-black'>🔵</p> : <p className='font-Comic md:mr-3 mr-1 font-black'>⚪</p>;
-    };
-    
-
-const Carousel1 = () => (
-    <AliceCarousel
-        mouseTracking
-        // disableDotsControls
-        disableButtonsControls
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-// 
-        // autoPlayControls
-        disableSlideInfo={false}
-        renderSlideInfo={renderSlideInfo}
-        renderDotsItem={renderDotsItem}
-        // renderPrevButton={renderPrevButton}
-        // renderNextButton={renderNextButton}
-    />
-);
-
-
-    return (
-        <div className='pt-7 mx-2'>
-            {Carousel1()}
         </div>
-    );
+      );
+    })
+
+  const renderSlideInfo = ({ item, itemsCount }: any) => {
+    return `${item}\\${itemsCount}`;
+  };
+
+  const renderDotsItem = ({ isActive }: any) => {
+    return isActive ? <p className='font-Comic md:mr-3 mr-1 text-green-500 font-black'>🔵</p> : <p className='font-Comic md:mr-3 mr-1 font-black'>⚪</p>;
+  };
+
+
+  const Carousel1 = () => (
+    <AliceCarousel
+      mouseTracking
+      // disableDotsControls
+      disableButtonsControls
+      items={items}
+      responsive={responsive}
+      controlsStrategy="alternate"
+      // 
+      // autoPlayControls
+      disableSlideInfo={false}
+      renderSlideInfo={renderSlideInfo}
+      renderDotsItem={renderDotsItem}
+    // renderPrevButton={renderPrevButton}
+    // renderNextButton={renderNextButton}
+    />
+  );
+
+
+  return (
+    <>
+      <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
+      <div className='pt-7 mx-2'>
+        {Carousel1()}
+      </div>
+    </>
+  );
 }
 
 export default Carousel;
