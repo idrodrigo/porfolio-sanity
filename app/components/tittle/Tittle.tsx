@@ -17,9 +17,11 @@ function Tittle() {
   ];
   return (
     <>
-      <h1 className="md:text-7xl font-extrabold text-center  leading-snug text-4xl md:mb-6 text-green-400">
+      <h1 className="md:text-7xl font-extrabold text-center leading-snug text-4xl md:mb-6 text-green-400">
         <div id="" className={pacifico.className}>
-        Hello I&apos;m{" "} Rodrigo
+          <span className="hello">
+        Hello, I&apos;m{" "} Rodrigo
+        </span>
         </div>
         {/* <span
           className="bg-gradient-to-r 
