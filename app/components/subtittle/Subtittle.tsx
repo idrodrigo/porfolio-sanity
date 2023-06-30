@@ -7,13 +7,14 @@ const Subtittle: React.FC<Props> = ({ subtittle, marginTop }) => {
     <>
       <div className={`flex justify-center`}>
         <h2
-          className={`img-pro ${marginTop} font-bold text-3xl underline underline-offset-8 decoration-red-600 decoration-wavy`}
+          className={`img-pro ${marginTop} font-bold text-3xl  before:block before:absolute before:-inset-1 before:-skew-y-3 group-hover/item:scale-75 before:bg-green-400 relative inline-block`}
         >
-          {subtittle}
+          <span className="relative text-white">{subtittle}</span>
         </h2>
       </div>
     </>
   );
 };
+
 
 export default Subtittle;

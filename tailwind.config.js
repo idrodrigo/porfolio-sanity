@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -15,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         "Comic": ["Comic Sans MS", 'Sans-serif'],
+        'Pacific': ['Pacifico',"Comic Sans MS",'cursive'],
       }
     },
   },

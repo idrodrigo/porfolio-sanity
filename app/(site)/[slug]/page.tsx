@@ -57,7 +57,7 @@ export default async function Page({ params }: Props) {
      )}
       
       </div>
-      <div className="mx-2 md:mx-6 lg:mx-10 mt-64 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
+      <div className="mx-2 md:mx-6 lg:mx-10 mt-16 md:mt-64 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
         {socials.map((social) => {
           return (
             <Link
