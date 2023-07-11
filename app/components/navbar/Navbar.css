@@ -1,4 +1,5 @@
 .burguer {
+    z-index: 2;
 
     /* nav-icon-5 */
     .nav-icon-5 {
@@ -87,6 +88,7 @@
 }
 
 .nav-container .logo {
+    z-index: 2;
     margin: 0;
     flex-grow: 1;
 }
@@ -124,6 +126,7 @@
 }
 
 .nav-container .links.active {
+    z-index: 2;
     display: block;
     position: absolute;
     margin-left: auto;
@@ -139,7 +142,6 @@
 .nav-container .links.active a {
     margin-right: 0;
     margin-top: 1rem;
-    /* color: black; */
 }
 
 @media (min-width: 768px) {
@@ -166,13 +168,13 @@
 
 /* BgDiv */
 .bgdiv {
-    z-index: -999;
-    /* background-color: green; */
+    z-index: -1;
+    background-color: white;
     position: absolute;
-    top: -18vh;
+    top: -20vh;
     left: 0;
     width: 100%;
-    height: 26vh;
+    height: 28vh;
     transition: all 0.4s ease;
 }
 
@@ -183,6 +185,7 @@
 }
 
 .bgdiv.active {
+    z-index: 1;
     top: 0;
     left: 0;
 }
