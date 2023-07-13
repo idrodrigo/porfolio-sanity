@@ -13,12 +13,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const pages = await getPages();
-  const pro = pages || "";
+  const pages = await getPages() || "";
   return (
     <html lang="en" className="dark">
       <body className="max-w-6xl mx-auto dark: ">
-        <Navbar pages={pro} />
+        <Navbar pages={pages} />
         <main className="py-6 mx-6">{children}</main>
 
       </body>

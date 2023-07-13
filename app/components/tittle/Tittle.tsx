@@ -12,7 +12,6 @@ function Tittle() {
     "Back End Developer",
     "Front End Developer",
     "Full Stack Developer",
-    
     "Web Developer",
   ];
   return (

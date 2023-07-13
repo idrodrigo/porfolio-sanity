@@ -28,7 +28,7 @@ export default async function Page({ params }: Props) {
   ];
 
   return (
-    <div>
+    <div className="md:mx-14 mx-11">
       <div className="flex">
         <h2
           className="bg-gradient-to-r 
@@ -38,24 +38,24 @@ export default async function Page({ params }: Props) {
           {title}
         </h2>
       </div>
-      
+
       <div className=" mx-2 text-lg mt-10 md:mx-32 font-light text-center">
-      {image && (
-           <Image
-           src={image}
-           alt={title}
-           width={250}
-           height={500}
-           className="mt-10 md:mt-0 h-80  border-black  rounded-2xl mb-10 inline-block"
-         />
-      )}
-     
-     {content && (
-  <div className="self-center  md:mx-8">
-  <PortableText value={content} />
-</div>
-     )}
-      
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            width={250}
+            height={500}
+            className="mt-10 md:mt-0 h-80  border-black  rounded-2xl mb-10 inline-block"
+          />
+        )}
+
+        {content && (
+          <div className="self-center  md:mx-8">
+            <PortableText value={content} />
+          </div>
+        )}
+
       </div>
       <div className="mx-2 md:mx-6 lg:mx-10 mt-16 md:mt-64 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
         {socials.map((social) => {
