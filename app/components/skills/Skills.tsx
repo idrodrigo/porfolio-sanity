@@ -31,9 +31,9 @@ export default async function Skills() {
                   <Image
                     src={image}
                     alt={skill}
-                    width={152}
-                    height={103}
-                    className="vibrate object-cover img-pro rounded-md align-middle"
+                    width={160}
+                    height={107.69}
+                    className="vibrate img-pro rounded-md align-middle"
                   />
                 )}
               </div>

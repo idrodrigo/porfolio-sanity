@@ -38,8 +38,8 @@ export default async function Projects() {
                   <Image
                     src={image}
                     alt={name}
-                    width={150}
-                    height={303}
+                    width={160.875}
+                    height={325.5}
                     className="object-cover rounded-md align-middle animate-shake"
                   />
                 )}

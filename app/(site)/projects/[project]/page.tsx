@@ -11,11 +11,11 @@ export default async function Project({ params }: Props) {
   const project = await getProject(slug);
 
   return (
-    <div>
-      <div className="sm:flex sm:justify-between">
+    <div className="mx-6 md:mx-8">
+      <div className="sm:flex sm:justify-between ">
         <h2
           className="bg-gradient-to-r 
-        from-green-400 via-violet-500 to-blue-700 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold"
+        from-green-400 via-violet-500 to-blue-700 bg-clip-text text-transparent text-4xl drop-shadow font-extrabold"
         >
           {project.name}
         </h2>
@@ -41,20 +41,21 @@ export default async function Project({ params }: Props) {
           </a>
         </div>
       </div>
-
-      <div className="text-lg text-gray-700 mt-5">
-        <PortableText value={project.content} />
-      </div>
+      <div className="md:mt-32 md:mx-16 mx-4 flex flex-col md:flex-row items-center justify-center md:gap-16 font-thin">
       <div className="mx-2 grid justify-center ">
         {project.image && (
           <Image
             src={project.image}
             alt={project.name}
-            width={225}
-            height={1080}
+            width={241.31}
+            height={488.25}
             className="mt-1 mb-8 object-cover  rounded-md align-middle "
           />
         )}
+      </div>
+      <div className="text-lg text-gray-700 mt-5">
+        <PortableText value={project.content} />
+      </div>
       </div>
     </div>
   );

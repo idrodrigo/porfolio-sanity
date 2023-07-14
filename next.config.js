@@ -4,6 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    // formats: ['image/webp'],
     remotePatterns: [
       {
         protocol: "https",
@@ -12,6 +13,7 @@ const nextConfig = {
       },
     ],
   },
+  
 };
 
 module.exports = nextConfig;

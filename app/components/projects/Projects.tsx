@@ -7,8 +7,9 @@ import Subtittle from "../subtittle/Subtittle";
 export default async function Projects() {
   const projects = await getProjects();
   const pro = projects || "";
-  const RecentProjects = ["movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App", "React Router Contacts"];
-  const newPro = pro.filter((project) => RecentProjects.includes(project?.name));
+  const RecentProjects = 
+  ["todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App", "React Router Contacts"];
+  const newPro = pro.filter((project) => RecentProjects.includes(project?.name)).sort((a, b) => RecentProjects.indexOf(a.name) - RecentProjects.indexOf(b.name));
   return (
     <>
       <Subtittle subtittle="Latest Projects:" marginTop="md:mt-2"/>
@@ -41,8 +42,8 @@ export default async function Projects() {
                   <Image
                     src={image}
                     alt={name}
-                    width={150}
-                    height={303}
+                    width={160.875}
+                    height={325.5}
                     className="object-cover rounded-md align-middle animate-shake"
                   />
                 )}
