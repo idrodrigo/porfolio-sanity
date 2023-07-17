@@ -40,7 +40,7 @@ export default async function Page({ params }: Props) {
         </h2>
       </div> */}
 
-      <Subtittle subtittle={title} marginTop={'0'} color="blue" />
+      <Subtittle subtittle={title} marginTop={'0'} />
 
       <div className=" mx-2 text-lg md:mt-10 md:mx-32 font-light flex flex-col items-center">
         {image && (
