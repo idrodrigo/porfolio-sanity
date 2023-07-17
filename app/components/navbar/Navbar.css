@@ -101,7 +101,6 @@
 }
 
 .nav-container .links a {
-    text-decoration: none;
     margin-right: 1rem;
     display: block;
     font-weight: bolder;
@@ -173,9 +172,9 @@
     z-index: -1;
     background-color: white;
     position: absolute;
-    top: -24vh;
+    top: -18vh;
     left: 0;
-    height: 32vh;
+    height: 26vh;
     transition: all 0.4s ease;
 }
 
@@ -186,7 +185,7 @@
 }
 
 .bgdiv.active {
-    width: 77%;
+    width: calc(100% - 88px);
     z-index: 1;
     top: 0;
     left: 0;

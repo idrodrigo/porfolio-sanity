@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-@import "react-alice-carousel/lib/alice-carousel.css";
 
 .bbody {
   background-repeat: round;

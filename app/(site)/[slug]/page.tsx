@@ -1,3 +1,4 @@
+import Subtittle from "@/app/components/subtittle/Subtittle";
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -29,7 +30,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <div className="md:mx-14 mx-8">
-      <div className="flex">
+      {/* <div className="flex">
         <h2
           className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 
@@ -37,7 +38,9 @@ export default async function Page({ params }: Props) {
         >
           {title}
         </h2>
-      </div>
+      </div> */}
+
+      <Subtittle subtittle={title} marginTop={'0'} color="blue" />
 
       <div className=" mx-2 text-lg md:mt-10 md:mx-32 font-light flex flex-col items-center">
         {image && (

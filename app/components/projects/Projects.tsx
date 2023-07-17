@@ -9,10 +9,13 @@ export default async function Projects() {
   const pro = projects || "";
   const RecentProjects = 
   ["todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App", "React Router Contacts"];
-  const newPro = pro.filter((project) => RecentProjects.includes(project?.name)).sort((a, b) => RecentProjects.indexOf(a.name) - RecentProjects.indexOf(b.name));
+  const newPro = pro
+    .filter((project) => RecentProjects
+    .includes(project?.name))
+    .sort((a, b) => RecentProjects.indexOf(a.name) - RecentProjects.indexOf(b.name));
   return (
     <>
-      <Subtittle subtittle="Latest Projects:" marginTop="md:mt-2"/>
+      <Subtittle subtittle="Latest Projects:" marginTop="md:mt-4" color="green"/>
 
 
       {/* <Carousel /> */}
@@ -44,7 +47,7 @@ export default async function Projects() {
                     alt={name}
                     width={160.875}
                     height={325.5}
-                    className="object-cover rounded-md align-middle animate-shake"
+                    className="animate-shake object-cover rounded-md align-middle"
                   />
                 )}
               </div>
