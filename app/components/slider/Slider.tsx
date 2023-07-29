@@ -1,21 +1,29 @@
 "use client";
+
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Image from "next/image";
-import { getProjects } from "@/sanity/sanity-utils";
 import Link from "next/link";
+import type { Project }  from "../../../types/project";
 
-export default async function Slider() {
+
+type Props = {
+  projects: Project[];
+};
+
+const Slider: React.FC<Props> = ({ projects }) => {
+
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 340;
+    if (slider) {
+      slider.scrollLeft = slider.scrollLeft - 340;
+    }
   };
 
   const slideRight = () => {
     var slider = document.getElementById("slider");
+    if (slider)
     slider.scrollLeft = slider.scrollLeft + 340;
   };
-
-  const data = await getProjects();
 
   return (
     <>
@@ -30,7 +38,7 @@ export default async function Slider() {
           id="slider"
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
-          {data.map((project) => (
+          {projects.map((project) => (
             <Link
               href={`/projects/${project.slug}`}
               key={project._id}
@@ -50,7 +58,7 @@ export default async function Slider() {
                     src={project.image}
                     alt={project.name}
                     width={150}
-                    height={1080}
+                    height={150}
                     className=""
                   />
                 )}
@@ -79,3 +87,5 @@ export default async function Slider() {
     </>
   );
 }
+
+export default Slider;

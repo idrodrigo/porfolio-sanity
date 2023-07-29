@@ -9,7 +9,7 @@ const TypeWords: React.FC<Props> = ({ jobTitles }) => {
   return (
     <>
         <div className="flex justify-center">
-        <div className="type font-Comic min-h-[5rem] md:min-h-[2.5rem] justify-center md:mx-0 mx-6 text-center mt-6 mb-5 text-4xl hover:text-green-400 font-extrabold text-blue-700">
+        <div className="type font-Comic min-h-[2.5rem] md:min-h-[2.5rem] justify-center md:mx-0 mx-6 text-center mt-3 md:mt-6 mb-5 md:text-4xl text-2xl  font-extrabold text-green-400">
           <Typewriter
             options={{
               loop: true,
@@ -20,7 +20,7 @@ const TypeWords: React.FC<Props> = ({ jobTitles }) => {
                 typewriter
                   .typeString(job)
                   .pauseFor(1000)
-                  .deleteChars(job.length);
+                  .deleteChars(job.length)
               });
               typewriter.start();
             }}

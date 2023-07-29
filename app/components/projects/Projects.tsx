@@ -45,8 +45,8 @@ export default async function Projects() {
                   <Image
                     src={image}
                     alt={name}
-                    width={160.875}
-                    height={325.5}
+                    width={128.7}
+                    height={260.4}
                     className="animate-shake object-cover rounded-md align-middle"
                   />
                 )}

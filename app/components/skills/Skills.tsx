@@ -10,7 +10,7 @@ export default async function Skills() {
   return (
     <>
       <Subtittle subtittle="Skills:" marginTop="mt-8" />
-      <div className="mx-6 md:mx-8 lg:mx-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-auto lg:gap-x-auto gap-y-8 my-10 pb-12">
+      <div className="mx-6 md:mx-8 lg:mx-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x- lg:gap-x- gap-y-8 my-10 pb-12">
         {skill.reverse().map((ski) => {
           const image = ski?.image || "";
           const skill = ski?.skill || "";
@@ -31,8 +31,8 @@ export default async function Skills() {
                   <Image
                     src={image}
                     alt={skill}
-                    width={160}
-                    height={107.69}
+                    width={128}
+                    height={86.15}
                     className="vibrate img-pro rounded-md align-middle"
                   />
                 )}

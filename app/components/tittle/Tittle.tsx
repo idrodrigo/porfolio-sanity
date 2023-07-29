@@ -18,9 +18,9 @@ function Tittle() {
     <>
       <h1 className="animate-shake md:text-7xl font-extrabold text-center leading-snug text-4xl md:mb-6 text-green-400">
         <div id="" className={pacifico.className}>
-          <span className="hello">
-        Hello, I&apos;m{" "} Rodrigo
-        </span>
+          <p className="hello">
+        Hello, i&apos;m{" "} Rodrigo <span className="hidden md:inline-block">Medina</span> 
+        </p>
         </div>
         {/* <span
           className="bg-gradient-to-r 

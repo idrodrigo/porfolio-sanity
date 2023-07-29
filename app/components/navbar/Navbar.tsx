@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from 'react';
 import Link from 'next/link';
 import './Navbar.css';
@@ -8,11 +9,11 @@ type Page = {
   slug: string;
 };
 
-type NavbarProps = {
+type Props = {
   pages: Page[];
 };
 
-export default function Navbar({ pages }: NavbarProps) {
+const Navbar: React.FC<Props> = ({ pages }) => {
   const [clicked, setClicked] = useState(false);
 
 
@@ -29,16 +30,19 @@ export default function Navbar({ pages }: NavbarProps) {
   return (
     <>
       <div className='nav-ghost'>
-        <nav className='nav-container border-b-2 border-b-blue-700 md:mx-14 mx-12'>
+        <nav className='nav-container border-b border-b-gray-200 md:mx-14 mx-12'>
           <div className='logo'>
             <Link 
               href='/' 
               className="omega font-Comic img-pro bg-gradient-to-r 
-            from-green-400 to-blue-700 
+            from-green-400 to-blue-400 
               bg-clip-text text-transparent text-3xl px-2"
               onClick={handleHomeClick}
               >
-              &#60; &Omega; &#62;
+              {/* &#60;&Omega;&#62; */}
+              &#60;Rodrigo &#47;&#62;
+              {/* &#60;◉~◉&#62; */}
+
             </Link>
           </div>
 
@@ -53,7 +57,7 @@ export default function Navbar({ pages }: NavbarProps) {
             <Link
               onClick={handleClick}
               href='/projects'
-              className="nav font-extrabold text-blue-700 px-3 transition hover:underline decoration-green-400 "
+              className="nav font-extrabold text-blue-500 px-3 transition hover:underline decoration-green-400"
             >
               Projects
             </Link>
@@ -62,7 +66,7 @@ export default function Navbar({ pages }: NavbarProps) {
                 onClick={handleClick}
                 href={`/${link.slug}`}
                 key={link.title}
-                className="nav font-extrabold text-blue-700 px-3 transition hover:underline decoration-green-400 "
+                className="nav font-extrabold text-blue-500 px-3 transition hover:underline decoration-green-400 "
               >
                 {link.title}
               </Link>
@@ -85,7 +89,7 @@ export default function Navbar({ pages }: NavbarProps) {
 
           <div
             role='bgdiv'
-            className={`md:mx-14 mx-11 border-b-2 border-b-blue-700 bgdiv initial ${clicked ? ' active' : ''}`}
+            className={`md:mx-14 mx-11 border-b border-b-gray-300 bgdiv initial ${clicked ? ' active' : ''}`}
           />
         </nav>
       </div>
@@ -93,3 +97,4 @@ export default function Navbar({ pages }: NavbarProps) {
   );
 }
 
+export default Navbar;

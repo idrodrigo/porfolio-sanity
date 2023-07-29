@@ -1,0 +1,13 @@
+.alice-carousel__dots {
+  margin: 0px 0px 0px;
+  font-size: larger;
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .alice-carousel__dots {
+    margin: 0px 0px 0px;
+    font-size: small;
+    padding-top: 0rem;
+  }
+}
