@@ -9,7 +9,7 @@ const AboutContent: React.FC = () => {
     <>
       <div>
         <p>
-          Hi, folks. I'm <Hl>Rodrigo Medina</Hl>. I'm an <Hl>engineer</Hl> and developer with experience implementing and executing <Hl>several software projects</Hl>  in development and production environments, adhering to <Hl>best practices</Hl> .
+          Hi, folks. I&apos;m <Hl>Rodrigo Medina</Hl>. I&apos;m an <Hl>engineer</Hl> and developer with experience implementing and executing <Hl>several software projects</Hl>  in development and production environments, adhering to <Hl>best practices</Hl> .
         </p>
         <br />
         <p>
