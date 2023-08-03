@@ -21,8 +21,9 @@ const responsive = {
     1024: { items: 3 },
 };
 
-const items = 
-projects.reverse().map((project) => {
+const items = projects
+  .reverse()
+  .map((project) => {
         const slug = project?.slug || "";
         const image = project?.image || "";
         const name = project?.name || "";
@@ -33,7 +34,7 @@ projects.reverse().map((project) => {
             href={`/projects/${slug}`}
             key={project._id}
             className="slide-top shadow-lg border border-gray-100 rounded-3xl hover:shadow-inner max-w-[300px] min-w-[300px]
-            max-h-[430px] min-h-[430px] hover:transition"
+            max-h-[400px] min-h-[400px] hover:transition"
           >
             <div className="p-2 text-center flex justify-center">
               <div
@@ -45,13 +46,13 @@ projects.reverse().map((project) => {
             </div>
             <div className="mx-2 grid justify-center ">
               {project.image && (
-                <Image
-                  src={image}
-                  alt={name}
-                  width={150}
-                  height={1080}
-                  className="object-cover  rounded-md align-middle "
-                />
+               <Image
+                src={image}
+                alt={name}
+                width={128.7}
+                height={260.4}
+                className="animate-shake object-cover rounded-md align-middle"
+              />
               )}
             </div>
 
@@ -81,6 +82,8 @@ projects.reverse().map((project) => {
 
 const Carousel1 = () => (
     <AliceCarousel
+        // autoPlay
+        // infinite
         mouseTracking
         // disableDotsControls
         disableButtonsControls
@@ -100,7 +103,7 @@ const Carousel1 = () => (
 
     return (
       <>
-    <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
+    <Subtittle subtittle="Latest Projects:" marginTop="md:mt-4" />
         <div className='pt-7 mx-2'>
             {Carousel1()}
         </div>

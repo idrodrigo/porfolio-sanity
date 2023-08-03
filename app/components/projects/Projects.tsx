@@ -8,7 +8,7 @@ export default async function Projects() {
   const projects = await getProjects();
   const pro = projects || "";
   const RecentProjects = 
-  ["todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App", "React Router Contacts"];
+  ["Node + React todo", "todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App"];
   const newPro = pro
     .filter((project) => RecentProjects
     .includes(project?.name))
