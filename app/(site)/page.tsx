@@ -12,7 +12,7 @@ import Carousel from "../components/carousel/Carousel";
 export default async function Home() {
   const projects = await getProjects() || "";
   const RecentProjects = 
-  ["todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App", "React Router Contacts"];
+  ["Node + React todo", "todoTS", "movieSearchReact", "Hackathon infojobs", "App Flights ", "Management App"];
   const newPro = projects
     .filter((project) => RecentProjects
     .includes(project?.name))

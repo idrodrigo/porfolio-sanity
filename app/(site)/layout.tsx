@@ -1,5 +1,5 @@
 import "../globals.css";
-import { getPages } from "@/sanity/sanity-utils";
+import { getPage, getPages, getAboutImage } from "@/sanity/sanity-utils";
 import Navbar from "../components/navbar/Navbar";
 
 export const metadata = {
@@ -14,8 +14,13 @@ export default async function RootLayout({
 }) {
 
   const pages = await getPages() || "";
+  const image = await (await getAboutImage()).image
   return (
     <html lang="en" className="dark">
+      <head>
+          {/* <link rel="shortcut icon" href={favicon} /> */}
+          <link rel="shortcut icon" href={image} />
+      </head>
       <body className="max-w-6xl mx-auto dark: ">
         <Navbar pages={pages} />
         <main className="py-6 mx-6">{children}</main>

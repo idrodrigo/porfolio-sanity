@@ -9,8 +9,8 @@ export default async function Skills() {
   const skill = skills || "";
   return (
     <>
-      <Subtittle subtittle="Skills:" marginTop="mt-8" />
-      <div className="mx-6 md:mx-8 lg:mx-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x- lg:gap-x- gap-y-8 my-10 pb-12">
+      <Subtittle subtittle="Skills:" marginTop="mt-2" />
+      <div className="mx-6 md:mx-8 lg:mx-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x- lg:gap-x- gap-y-8 my-2 pb-12">
         {skill.reverse().map((ski) => {
           const image = ski?.image || "";
           const skill = ski?.skill || "";

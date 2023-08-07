@@ -22,7 +22,6 @@ const responsive = {
 };
 
 const items = projects
-  .reverse()
   .map((project) => {
         const slug = project?.slug || "";
         const image = project?.image || "";
@@ -82,10 +81,12 @@ const items = projects
 
 const Carousel1 = () => (
     <AliceCarousel
-        // autoPlay
-        // infinite
+        autoPlay
+        infinite
+        animationDuration={8000}
+        autoPlayDirection='rtl'
         mouseTracking
-        // disableDotsControls
+        disableDotsControls
         disableButtonsControls
         items={items}
         responsive={responsive}
@@ -103,8 +104,8 @@ const Carousel1 = () => (
 
     return (
       <>
-    <Subtittle subtittle="Latest Projects:" marginTop="md:mt-4" />
-        <div className='pt-7 mx-2'>
+    <Subtittle subtittle="Latest Projects:" marginTop="md:mt-2" />
+        <div className='pt-7 mx-3 md:mx-8 lg:mx-10'>
             {Carousel1()}
         </div>
         </>

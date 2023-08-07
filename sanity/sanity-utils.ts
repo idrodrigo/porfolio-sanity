@@ -94,3 +94,11 @@ export async function getPage(slug: string): Promise<Page> {
     { slug }
   );
 }
+
+export async function getAboutImage(): Promise<Page> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "page"][0]{
+      "image": image.asset->url,
+    }`
+  );
+}
