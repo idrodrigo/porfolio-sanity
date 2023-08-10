@@ -16,12 +16,17 @@ function Tittle() {
   ];
   return (
     <>
-      <h1 className="animate-shake md:text-7xl font-extrabold text-center leading-snug text-4xl md:mb-6 text-green-400">
+          {/* {
+          <p className="font-thin animate-shake">Rodrigo Medina</p>
+        } */}
+      <h1 className="animate-shake md:text-7xl font-extrabold text-center leading-snug text-4xl md:mb-8 md:mt-4 mb-4 text-green-400">
         <div id="" className={pacifico.className}>
-          <p className="hello">
-        Hello, i&apos;m{" "} Rodrigo <span className="hidden md:inline-block">Medina</span> 
+          <p className="">
+        Hello, i&apos;m{" "}
+         Rodrigo <span className="hidden md:inline-block">Medina</span> 
         </p>
         </div>
+  
         {/* <span
           className="bg-gradient-to-r 
         from-green-400 via-violet-500 to-blue-700 transition
@@ -30,7 +35,7 @@ function Tittle() {
           Rodrigo
         </span> */}
       </h1>
-      <TypeWords jobTitles={jobTitles} />
+      {/* <TypeWords jobTitles={jobTitles} /> */}
     </>
   );
 }

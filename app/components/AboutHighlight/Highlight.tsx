@@ -4,7 +4,7 @@ interface Props {
 const Hl: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <span className="text-emerald-400">
+      <span className="text-teal-400 font-normal">
         {children}
       </span>
     </>

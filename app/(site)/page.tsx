@@ -4,9 +4,10 @@ import Projects from "../components/projects/Projects";
 import Tittle from "../components/tittle/Tittle";
 
 import ButtonBack from "../components/buttonBackground/ButtonBack";
-import { getProjects } from "@/sanity/sanity-utils";
+import { getProjects, getSkills } from "@/sanity/sanity-utils";
 import Slider from "../components/slider/Slider";
 import Carousel from "../components/carousel/Carousel";
+import SkillsCarousel from "../components/carousel/SkillsCarousel";
 
 
 export default async function Home() {
@@ -17,18 +18,22 @@ export default async function Home() {
     .filter((project) => RecentProjects
     .includes(project?.name))
     .sort((a, b) => RecentProjects.indexOf(a.name) - RecentProjects.indexOf(b.name));
+
+  const skills = await getSkills();
+  const skill = skills || "";
   return (
     <>
       {/* <ButtonBack /> */}
       <Tittle />
       
       <Carousel projects={newPro} />
+      <SkillsCarousel skills={skill} />
 
       {/* <Slider projects={projects} /> */}
       {/* @ts-expect-error Server Component
       <Projects /> */}
-      {/* @ts-expect-error Server Component */}
-      <Skills />
+      {/* @ts-expect-error Server Component
+      <Skills /> */}
     </>
   );
 }

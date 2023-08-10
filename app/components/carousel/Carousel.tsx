@@ -81,10 +81,10 @@ const items = projects
 
 const Carousel1 = () => (
     <AliceCarousel
-        autoPlay
-        infinite
-        animationDuration={8000}
-        autoPlayDirection='rtl'
+        // autoPlay
+        // infinite
+        // animationDuration={8000}
+        // autoPlayDirection='rtl'
         mouseTracking
         disableDotsControls
         disableButtonsControls
