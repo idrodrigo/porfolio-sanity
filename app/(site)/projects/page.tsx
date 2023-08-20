@@ -10,7 +10,7 @@ export default async function Projects() {
   const pro = projects || "";
   return (
     <>
-      <Subtittle subtittle="Projects:" marginTop="md:mt-2" />
+      <Subtittle subtittle="Projects:" marginTop={'mt-8'}/>
       {/* <Carousel /> */}
       <div className="mx-6 md:mx-8 lg:mx-10 mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 pb-5">
         {pro.reverse().map((project) => {

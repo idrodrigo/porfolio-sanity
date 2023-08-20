@@ -23,7 +23,7 @@ export default async function RootLayout({
       </head>
       <body className="max-w-6xl mx-auto dark: ">
         <Navbar pages={pages} />
-        <main className="py-6 mx-6">{children}</main>
+        <main className=" mx-6">{children}</main>
 
       </body>
     </html>

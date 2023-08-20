@@ -9,15 +9,15 @@ const AboutContent: React.FC = () => {
     <>
       <div>
         <p>
-          Hi, folks. I&apos;m <Hl>Rodrigo Medina</Hl>. I&apos;m an <Hl>engineer</Hl> and developer with experience implementing and executing <Hl>several software projects</Hl>  in development and production environments, adhering to <Hl>best practices</Hl> .
+          Hi, folks. I&apos;m <Hl>Rodrigo Medina</Hl>. I&apos;m an <Hl>engineer</Hl> and developer with experience implementing and executing <Hl>several software projects</Hl>  in development and production environments, adhering to <Hl>best practices</Hl>.
         </p>
         <br />
         <p>
-          Adaptable <Hl>team player</Hl>  with a <Hl>strong aptitude</Hl>  for learning, sharing knowledge, and <Hl>achieving goals</Hl>. Proactively stays updated on the latest technologies through conferences, <Hl>meetups</Hl> , courses, and programming blogs/websites.
+          Adaptable <Hl>team player</Hl> with a <Hl>strong aptitude</Hl> for learning, sharing knowledge, and <Hl>achieving goals</Hl>. Proactively stays updated on the latest technologies through conferences, <Hl>meetups</Hl>, courses, and programming blogs/websites.
         </p>
         <br />
         <p>
-          Passionate about continuous <Hl>improvement</Hl> .
+          Passionate about continuous <Hl>improvement</Hl>.
         </p>
         <br />
         <p>
