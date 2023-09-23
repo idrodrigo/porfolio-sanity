@@ -91,7 +91,7 @@ const renderSlideInfo = ({ item, itemsCount }: any) => {
   return (
     <>
       <Subtittle subtittle="Skills:" marginTop="mt-2" />
-      <div className='pt-7 md:mx-14 mx-6'>
+      <div className='pt-7 md:mx-14 mx-6 md:mb-10 mb-8'>
         {Carousel1()}
       </div>
     </>

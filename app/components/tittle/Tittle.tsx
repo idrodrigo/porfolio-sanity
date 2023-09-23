@@ -19,7 +19,7 @@ function Tittle() {
           {/* {
           <p className="font-thin animate-shake">Rodrigo Medina</p>
         } */}
-      <h1 className="animate-shake md:text-5xl font-extrabold text-center leading-snug text-4xl md:my-8  my-4 text-teal-400">
+      <h1 className="animate-shake md:text-5xl font-extrabold text-center leading-snug text-4xl md:my-8 my-4 text-teal-400">
         <div id="" className={pacifico.className}>
           <p className="">
         Hello, I&apos;m{" "}

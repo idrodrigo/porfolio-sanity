@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         "Comic": ["Comic Sans MS", 'Sans-serif'],
         'Pacific': ['Pacifico',"Comic Sans MS",'cursive'],
+        'Roboto': ["Roboto","Arial","sans-serif"],
       }
     },
   },

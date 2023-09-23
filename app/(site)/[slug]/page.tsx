@@ -71,7 +71,8 @@ export default async function Page({ params }: Props) {
         </div>
       )}
 
-    </div>}
+    </div>
+    }
       {
         socials[0].url && <div className="mx-2 md:mx-6 lg:mx-10 mt-8 md:mt-64 grid 
         grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 md:gap-y-5 gap-y-16">
