@@ -1,7 +1,7 @@
 export type Bookmarks = {
   _id: string;
   _createdAt: Date;
-  bookmark: string;
+  title: string;
   slug: string;
   image: string;
   url: string;

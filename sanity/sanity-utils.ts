@@ -109,7 +109,7 @@ export async function getBookmarks(): Promise<Bookmarks[]> {
     groq`*[_type == "bookmarks"]{
         _id,
         _createdAt,
-        bookmarks,
+        title,
         "slug": slug.current,
         "image": image.asset->url,
         url,

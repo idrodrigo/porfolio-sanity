@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default async function Bookmarks() {
   const bookmarks:Bookmarks[] = await getBookmarks() || [];
+  console.log(bookmarks[0].title)
   return(
     <>
     <Subtittle subtittle={"Bookmarks"} marginTop={'mt-10'} />
@@ -23,14 +24,14 @@ export default async function Bookmarks() {
                     className="text-xl font-extrabold bg-gradient-to-r 
         from-green-400 to-blue-700 bg-clip-text text-transparent"
                   >
-                    {bookmark.bookmark}
+                    {bookmark.title}
                   </div>
                 </div>
                 <div className="mx-2 grid justify-center ">
                   {bookmark.image && (
                     <Image
                       src={bookmark.image}
-                      alt={bookmark.bookmark}
+                      alt={bookmark.title}
                       width={128.7}
                       height={260.4}
                       className="object-cover rounded-md align-middle animate-shake"

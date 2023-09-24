@@ -4,15 +4,15 @@ const bookmarks = {
   type: "document",
   fields: [
     {
-      name: "bookmarks",
-      title: "bookmarks",
+      name: "title",
+      title: "title",
       type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "bookmarks" },
+      options: { source: "title" },
     },
     {
       name: "image",
