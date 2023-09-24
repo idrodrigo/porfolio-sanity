@@ -3,6 +3,7 @@ import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { Page } from "@/types/page";
 import { Skills } from "@/types/skills";
+import { Bookmarks } from "@/types/bookmarks";
 
 export async function getSkills(): Promise<Skills[]> {
   return createClient(clientConfig).fetch(
@@ -100,5 +101,18 @@ export async function getAboutImage(): Promise<Page> {
     groq`*[_type == "page"][0]{
       "image": image.asset->url,
     }`
+  );
+}
+
+export async function getBookmarks(): Promise<Bookmarks[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "bookmarks"]{
+        _id,
+        _createdAt,
+        bookmarks,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+      }`
   );
 }

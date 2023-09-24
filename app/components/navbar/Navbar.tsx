@@ -57,7 +57,7 @@ const Navbar: React.FC<Props> = ({ pages }) => {
             <Link
               onClick={handleClick}
               href='/projects'
-              className="nav font-Roboto text-blue-500 px-3 transition hover:underline decoration-teal-400"
+              className="text-lg font-Roboto text-blue-500 px-3 transition hover:text-blue-700 hover:underline hover:decoration-teal-400"
             >
               Projects
             </Link>
@@ -66,11 +66,18 @@ const Navbar: React.FC<Props> = ({ pages }) => {
                 onClick={handleClick}
                 href={`/${link.slug}`}
                 key={link.title}
-                className="nav font-Roboto text-blue-500 px-3 transition hover:underline decoration-teal-400 "
+                className="text-lg font-Roboto text-blue-500 px-3 transition hover:text-blue-700 hover:underline hover:decoration-teal-400"
               >
                 {link.title}
               </Link>
             ))}
+                    <Link
+              onClick={handleClick}
+              href='/bookmarks'
+              className="text-lg font-Roboto text-blue-500 px-3 transition hover:text-blue-700 hover:underline hover:decoration-teal-400"
+            >
+              Bookmarks
+            </Link>
           </div>
 
           <div className='burguer'>
