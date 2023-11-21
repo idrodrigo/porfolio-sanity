@@ -21,42 +21,40 @@ const SkillsCarousel: React.FC<Props> = ({ skills }) => {
     1024: { items: 6 },
   };
 
-  const items = skills
+  const items = skills.reverse().map((skill) => {
 
-    .reverse().map((skill) => {
-
-      const image = skill?.image || "";
-      const skil = skill?.skill || "";
-      const url = skill?.url || "";
-      return (
-        <>
-          <Link href={`${url}`} key={skill._id} className=" ">
-            <div className=" text-center flex justify-center">
-              <div
-                className="text-sm font-extrabold bg-gradient-to-r 
+    const image = skill?.image || "";
+    const skil = skill?.skill || "";
+    const url = skill?.url || "";
+    return (
+      <>
+        <Link href={`${url}`} key={skill._id}>
+          <div className=" text-center flex justify-center">
+            <div
+              className="text-sm font-extrabold bg-gradient-to-r 
       from-green-400 to-blue-700 bg-clip-text text-transparent"
-              >
-                {skil}
-              </div>
+            >
+              {skil}
             </div>
+          </div>
 
-            <div className="mx-2 grid justify-center ">
-              {skill.image && (
-                <Image
-                  src={image}
-                  alt={skil}
-                  width={128}
-                  height={86.15}
-                  className="vibrate img-pro rounded-md align-middle"
-                />
-              )}
-            </div>
-          </Link>
-        </>
-      )
-    });
-  
-const renderSlideInfo = ({ item, itemsCount }: any) => {
+          <div className="mx-2 grid justify-center ">
+            {skill.image && (
+              <Image
+                src={image}
+                alt={skil}
+                width={116.5}
+                height={78.5}
+                className="vibrate img-pro rounded-md align-middle"
+              />
+            )}
+          </div>
+        </Link>
+      </>
+    )
+  });
+
+  const renderSlideInfo = ({ item, itemsCount }: any) => {
     return `${item}\\${itemsCount}`;
   };
 
@@ -69,7 +67,7 @@ const renderSlideInfo = ({ item, itemsCount }: any) => {
     <AliceCarousel
       autoPlay
       infinite
-      animationDuration={3000} 
+      animationDuration={3000}
       // autoPlayDirection='rtl'
       // mouseTracking
       disableDotsControls
